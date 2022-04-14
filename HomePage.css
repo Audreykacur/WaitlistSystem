@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    --bg-color: #ede9f8;
+    --color-primary: #0055A4;
+    --color-secondary: #C1DCF4;
+    --color-accent: #F59A23;
+}
+body{
+    height: 100vh;
+    flex-wrap: wrap;
+    background-image: url('./SEbackground.jpg');
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-primary);
+    width: 100%;
+    height: 15vh;
+}
+a{
+    text-decoration: none;
+}
+header h1{
+   color: var(--bg-color);
+   margin-left: 40px;
+}
+#header-a1{
+   margin-right: 40px;
+   text-decoration: none;
+   color: var(--color-accent);
+}
+.container{
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    border-radius: 20px;
+}
+.container-header{
+    margin-top: 50px;
+}
+#header-home{
+    margin: 0 auto;
+    width: 330px;
+    background-color: var(--color-accent);
+    color: var(--bg-color);
+    padding: 14px;
+    border-radius: 20px;
+}
+.container-text{
+    margin-top: 20px;
+   margin-left: 180px;
+   margin-right: 100px;
+}
+#first{
+    margin-bottom: 20px;
+}
+#second{
+    margin-bottom: 20px;
+}
+#third{
+    margin-bottom: 20px;
+}
+p{
+    margin-bottom: 20px;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+button{
+    width: 200px;
+    height: 80px;
+    border-radius: 20px;
+    background-color: var(--color-primary);
+    outline: none;
+    border: none;
+    color: var(--bg-color);
+    font-size: 25px;
+}
+footer{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-primary);
+}
+footer h3{
+    padding: 14px;
+    color: var(--bg-color);
+}
+#margin{
+    margin-bottom: 80px;
+}
+@media only screen and (max-width: 600px){
+    header{
+        width: 100%;
+    }
+    .container{
+        width: 500px;
+        display: block;
+        height: 80vh;
+    }
+    #header-home{
+        margin: 0 auto;
+        width: 300px;
+        color: var(--color-accent);
+        padding: 4px;
+        border-radius: 18px;
+        font-size: 1.8rem;
+        background-color: var(--bg-color);
+    }
+    .secondary-container h1{
+        margin-top: 20px;
+    }
+    h1{
+        margin-top: 10px;
+    }
+    .container-text{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        padding: 1.4rem;
+        margin: 0 auto;
+    }
+    footer{
+        font-size: 0.8rem;
+    }
+    #margin{
+        margin-bottom: none;
+    }
+}
+@media only screen and (min-width: 600px) and (max-width: 780px){
+    .container{
+        width: 550px;
+        display: block;
+        height: 80vh;
+    }
+    #header-home{
+        margin: 0 auto;
+        width: 300px;
+        color: var(--color-accent);
+        padding: 4px;
+        border-radius: 18px;
+        font-size: 1.8rem;
+        background-color: var(--bg-color);
+    }
+    .container-text{
+        margin-top: 10px;
+        margin-left: 90px;
+        margin-right: 90px;
+    }
+    .container-header{
+        margin-top: 20px;
+    }
+    h1{
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (min-width: 780px) and (max-width: 980px){
+    .container{
+        width: 640px;
+        display: block;
+        height: 80vh;
+    }
+    #header-home{
+        margin: 0 auto;
+        width: 300px;
+        color: var(--color-accent);
+        padding: 4px;
+        border-radius: 18px;
+        font-size: 1.8rem;
+        background-color: var(--bg-color);
+    }
+    .container-text{
+        margin-top: 10px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+@media only screen and (min-width: 400px) and (max-width: 500px){
+    .container{
+        width: 350px;
+        display: block;
+        height: 80vh;
+    }
+    footer{
+        font-size: 0.6rem;
+    }
+}
+@media only screen and (max-width: 400px){
+    .container{
+        width: 300px;
+        display: block;
+        height: 80vh;
+    }
+    #header-home{
+        margin: 0 auto;
+        width: 200px;
+        color: var(--color-accent);
+        padding: 4px;
+        border-radius: 18px;
+        font-size: 1.2rem;
+        background-color: var(--bg-color);
+    }
+    footer{
+        font-size: 0.5rem;
+    }
+}
