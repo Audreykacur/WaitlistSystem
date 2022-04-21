@@ -16,30 +16,30 @@
         </div>
     <div class="container">
         <div class="form_box" id = "create">
-            <form action="" id="form">
+            <form action="connect.php" method="post" id="form">
             <h1 class = "form__title">Create Account</h1>
 
             <div class="form__input-group">
                 <h3>Business Name</h3>
-                <input type="text" class="form__input"  id="Business Name" placeholder="Business Name">
+                <input type="text" class="form__input"  id="Business Name" placeholder="Business Name" name="bname">
                 <small>Error Message</small>
             </div>
 
             <div class="form__input-group">
                 <h3>Email</h3>
-                <input type="text" class="form__input" id="email"placeholder="Email"> 
+                <input type="text" class="form__input" id="email"placeholder="Email" name="email"> 
                 <small>Error Message</small>
             </div>
 
                 <div class="form__input-group">
                     <h3>Password</h3>
-                    <input type="password" class="form__input" id="password"placeholder="Password">
+                    <input type="password" class="form__input" id="password"placeholder="Password" name="password">
                     <small>Error Message</small>
                 </div>
 
                 <div class="form__input-group">
                     <h3>Confirm Password</h3>
-                    <input type="password" class="form__input" id="password2" placeholder=" Confirm Password">
+                    <input type="password" class="form__input" id="password2" placeholder=" Confirm Password" name="password2">
                     <small>Error Message</small>
                 </div>
             <button id="footer-btn">Submit</button>

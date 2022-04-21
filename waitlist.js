@@ -42,7 +42,7 @@ function deleteCheck(e){
         const todo = item.parentElement;
         todo.classList.add('fall');
         // remove
-        removeLocalTodos(todo);
+        removeLocalTodos(todo); 
         todo.addEventListener('transitionend', function(){
             todo.remove();
         });

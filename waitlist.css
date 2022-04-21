@@ -3,19 +3,19 @@
     padding: 0;
     box-sizing: border-box;
     --bg-color: #ede9f8;
-    --color-primary: #0055A4;
+    --color-primary: #000000;
     --color-secondary: #C1DCF4;
-    --color-accent: #F59A23;
+    --color-accent: #90b5d3;
 }
 body{
-    background: var(--color-secondary);
+    background-image: url(./useme.jpg);
     color: white;
     font-family: 'poppins',sans-serif;
     min-height: 100vh;
 }
 header{
     font-size: 1.5rem;
-    color: var(--color-primary);
+    background-color: var(--color-primary);
     border-bottom: 8px solid var(--color-accent);
 }
 header,form{
@@ -35,7 +35,7 @@ form input, form button{
     border: 1px solid var(--color-primary);
 }
 a{
-    color: var(--color-primary);
+    color: var(--bg-color);
     outline: none;
     text-decoration: none;
 }
