@@ -1,0 +1,22 @@
+{
+  "name": "waitlistsystem2022",
+  "version": "1.0.0",
+  "description": "Software Engineering 1 Project 2022",
+  "main": "create.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Audreykacur/WaitlistSystem.git"
+  },
+  "author": "Seth, Audrey, Juliana, Renato",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Audreykacur/WaitlistSystem/issues"
+  },
+  "homepage": "https://github.com/Audreykacur/WaitlistSystem#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
