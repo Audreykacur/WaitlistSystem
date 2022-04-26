@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="./waitlist.css">
     <title>Waitlist</title>
 </head>
@@ -21,15 +24,115 @@
         </a>
     </header>
     <form>
-
+        <div class="container">
         <table>
             <tr>
                 <td> </td>
                 <td><input type="text" class="todo-input" name="name" placeholder=" Name "></td>
-                <td><input type="text" class="todo-num" name="number" placeholder=" Number ">
-                    <button class="todo-btn" id="btn" type="submit">
+                <td><input type="text" class="todo-num" name="number" placeholder=" Number "></td>
+                <!-- <td><input type="date" class="date" value=""></td>    
+                <td><input type="time" class="time" value=""></td>        -->
+              <td><div id="myNav" class="overlay">
+
+                <!-- Button to close the overlay navigation -->
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              
+                <!-- Overlay content -->
+                <div class="overlay-content">
+                    <table id="table">
+                        <tr>
+                            <td><input type="checkbox" id="Monday" value=1 name="Monday"> Monday </td>
+
+                            <td> Open Time</td>
+                            <td> Closing Time</td>
+                        </tr>
+                        <tr>
+                            <!-- storing time into a database https://stackoverflow.com/questions/36773095/storing-html-input-of-type-time-into-mysql-database -->
+                            <td> </td>
+                            <td><input type="time" class=timebox id="Mopen" name="Mopen"></td>
+                            <td><input type="time" class=timebox id="Mclose" name="Mclose"></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox" value=1 name="Tuesday"> Tuesday </td>
+
+                            <td> Open Time</td>
+                            <td> Closing Time</td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td><input type="time" class=timebox id="Topen" name="Topen"></td>
+                            <td><input type="time" class=timebox id="Tclose" name="Tclose"></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox" value=1 id="Wednesday" name="Wednesday"> Wednesday </td>
+
+                            <td> Open Time</td>
+                            <td> Closing Time</td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td><input type="time" class=timebox id="Wopen" name="Wopen"></td>
+                            <td><input type="time" class=timebox id="Wclose" name="Wclose"></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox" value=1 id="Thursday" name="Thursday"> Thursday </td>
+
+                            <td> Open Time</td>
+                            <td> Closing Time</td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td><input type="time" class=timebox id="Thopen" name="Thopen"></td>
+                            <td><input type="time" class=timebox id="Thclose" name="Thclose"></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox" value=1 id="Friday" name="Friday"> Friday </td>
+
+                            <td> Open Time</td>
+                            <td> Closing Time</td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td><input type="time" class=timebox id="Fopen" name="Fopen"></td>
+                            <td><input type="time" class=timebox id="name=" Fclose"></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox" value=1 id="Saturday" name="Saturday"> Saturday </td>
+
+                            <td> Open Time</td>
+                            <td> Closing Time</td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td><input type="time" class=timebox id="Satopeen" name="Satopen"></td>
+                            <td><input type="time" class=timebox id="Satclose" name="Satclose"></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox" value=1 id="Sunday" name="Sunday"> Sunday </td>
+
+                            <td> Open Time</td>
+                            <td> Closing Time</td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td><input type="time" class=timebox id="Sunopen" name="Sunopen"></td>
+                            <td><input type="time" class=timebox id="Sunclose" name="Sunclose"></td>
+                        </tr>
+                    </table>
+
+                </div>
+                
+              </div>
+              <span onclick="openNav()"><i id="bars" class="fa-solid fa-bars fa-2x"></i></span>
+                    <td><button class="todo-btn" id="btn" type="submit">
                         <i class="fas fa-plus-square"></i>
-                    </button>
+                    </button></td>
                 </td>
                 <td>
                     <div class="select">
@@ -42,7 +145,7 @@
                 </td>
             </tr>
         </table>
-
+    </div>
     </form>
     <!-- creating an empty (div)container ul is an empty unordered list -->
     <div class="todo-container">
@@ -51,6 +154,7 @@
     <div class="todo-container">
         <ul class="num-list"></ul>
     </div>
+    
 
     <!-- <script type="text/javascript">
         alert("Thank you for joining waitlist. If you have any questions or concerns please feel free to contact us.");

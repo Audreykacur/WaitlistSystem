@@ -5,6 +5,8 @@ const todoList = document.querySelector('.todo-list');
 const filterOption = document.querySelector('.filter-todo');
 const todoNum = document.querySelector(".todo-num");
 const numList = document.querySelector(".num-list");
+const todoDate = document.querySelector(".date");
+const todoTime = document.querySelector(".time");
 
 // Event Listeners
 todoButton.addEventListener('click', addTodo);
@@ -160,3 +162,11 @@ const btn = document.getElementById('btn');
   phoneNumber.value = '';
 });*/
 
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+  
+  /* Close when someone clicks on the "x" symbol inside the overlay */
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
