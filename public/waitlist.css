@@ -1,85 +1,128 @@
-*{
+
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    --bg-color: #ede9f8;
+    --bg-color: #ffffff;
     --color-primary: #000000;
-    --color-secondary: #C1DCF4;
     --color-accent: #90b5d3;
+    --dB: #1b3e4f;
 }
-body{
+
+body {
     background-image: url(./useme.jpg);
     color: white;
-    font-family: 'poppins',sans-serif;
+    /* change this font family ** */
+    font-family: 'poppins', sans-serif;
+
     min-height: 100vh;
 }
-header{
+
+header {
+    /* waitlist words at the top of the screen */
     font-size: 1.5rem;
     background-color: var(--color-primary);
     border-bottom: 8px solid var(--color-accent);
 }
-header,form{
+
+
+
+header,
+form {
+    /* the black row at the top of the screen */
     min-height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-form input{
-    border-radius: 10px 0px 0px 10px;
+
+form input {
+    /* the name and number box roundness */
+    border-radius: 10px 10px 10px 10px;
 }
-form input, form button{
+
+form input,
+form button {
+    /* the buttons you inssert name number and phone number in and the add button */
     padding: 0.5rem;
-    font-size: 2rem;
+    font-size: 1.7rem;
     border: none;
     background: white;
     border: 1px solid var(--color-primary);
 }
-a{
+
+a {
+    /* waitlist title at the top of the page */
     color: var(--bg-color);
     outline: none;
     text-decoration: none;
 }
-form button{
+
+form button {
+    /* button that adds names to the waitlist */
     color: var(--color-primary);
     background: white;
     cursor: pointer;
     transition: all 0.3s ease;
-    border-radius: 0 10px 10px 0;
+    border-radius: 10px 10px 10px 10px;
 }
-form button:hover{
+
+form button:hover {
+    /* changes the add button to blue when you hover */
     background: var(--color-accent);
     color: white;
 }
-.todo-container{
+
+.todo-container {
+    /* the boxes the name gets added into */
     display: flex;
     justify-content: center;
     align-items: center;
+
+
 }
-.todo-list{
-    min-width: 30%;
+
+.todo-list {
+    /* The size of the boxes the names get added into */
+    min-width: 50%;
     list-style: none;
 }
-.todo{
+.date-time{
+    max-width: 300px;
+}
+.todo {
+    /* the boxes that names are added into */
+    /* Space between entries */
     margin: 0.5rem;
+    /* the backgroud color of the boxes */
     background: white;
-    color: black;
-    font-size: 1.5rem;
+    /* the color of the names when added */
+    color: var(--dB);
+    /* the font size of the names when added */
+    font-size: 2rem;
     display: flex;
     justify-content: space-between;
     transition: all 0.5s ease;
+    /* the curve of the edges */
     border-radius: 10px;
-}
-.todo li{
-   flex: 1; /* display flex */
-}
-.todos{
-    border-radius: 10px;
-}
-.filter-todo{
-   border-radius: 10px;
 }
 
-.trash-btn, .complete-btn{
+.todo li {
+    flex: 1;
+    /* display flex */
+}
+
+/* .todos {
+    border-radius: 100px;
+} */
+
+/* .filter-todo {
+    border-radius: 10px;
+} */
+
+.trash-btn,
+.complete-btn {
     background: var(--color-primary);
     color: white;
     border: none;
@@ -87,46 +130,119 @@ form button:hover{
     cursor: pointer;
     font-size: 1rem;
 }
-.trash-btn{
+
+.trash-btn {
+    /* trashcan button */
     border-radius: 0 10px 10px 0;
 }
-.complete-btn{
-    background: rgb(138, 240, 138);
+
+.complete-btn {
+    /* checkmark button */
+    background: var(--color-accent);
+
 }
-.todo-item{
-    padding: 0rem 0.5rem;
+
+.todo-item {
+    /* space between the begining and the first letter of the names entered */
+    /* .3 is up and down and 1.5 iss to the right */
+    padding: .3rem 1.5rem;
 }
-.fa-trash, .fa-check{
+
+.fa-trash,
+.fa-check {
     pointer-events: none;
+} 
+/* Start of drop down */
+
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+  
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top  */
+    width: 100%; /* 100% width */
+    text-align: center; 
+    justify-content: center;/* Centered text/links */ /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  /* The navigation links inside the overlay */
+  .overlay table {
+    padding: 4px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    margin: 0 auto;
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  .fa-solid{
+      background-color: var(--bg-color);
+      color: var(--color-primary);
+      border-radius: 5px;
+      border: 1px solid var(--color-primary);
+      padding: 7px;
+  }
+
+
+
+/* End of dropdoown */
+
+#table{
+    align-items: center;
 }
-.completed{
-    text-decoration: line-through;
-    opacity: 0.5;
-}
-.fall{
-    transform: translateY(8rem) rotateZ(20deg);
+
+.fall {
+    /* when the task is completed how it falls off the list */
+    transform: translateY(20rem) rotateZ(15deg);
     opacity: 0;
-    
+
 }
-select{
+
+select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     box-shadow: none;
     border: none;
 }
-.select{
+
+.select {
     margin: 1rem;
     position: relative;
     overflow: hidden;
 }
-select{
+
+select {
     color: var(--color-primary);
     width: 10rem;
     cursor: pointer;
     padding: 1rem;
 }
-.select::after{
+
+.select::after {
     content: "\25BC";
     position: absolute;
     background: var(--color-primary);
@@ -136,10 +252,12 @@ select{
     pointer-events: none;
     transition: 0.3s ease all;
 }
-.select:hover::after{
+
+.select:hover::after {
     background: white;
     color: var(--color-accent);
 }
-input{
+
+input {
     font-size: 1.4rem;
 }
