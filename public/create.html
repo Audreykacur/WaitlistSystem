@@ -1,5 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<style>
+    body {
+        font-family: 'Montserrat';
+        font-size: 15px;
+    }
+</style>
+
+</html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,42 +19,147 @@
     <link rel="stylesheet" href="./create.css">
     <title>Waitlist</title>
 </head>
+
 <body>
     <div class="headerWrapper">
         <header>
-            <a href="./HomePage.html"><h1>Waitlist</h1></a>
+            <a href="./HomePage.html">
+                <h1>Waitlist</h1>
+            </a>
             <a href="./Login.html"><button class="header__btn">Login</button></a>
         </header>
-        </div>
+
+    </div>
     <div class="container">
-        <div class="form_box" id = "create">
-            <form action="connect.php" method="post" id="form">
-            <h1 class = "form__title">Create Account</h1>
+        <div class="form_box" id="create">
+            <form action="insert.php" method="GET" id="form">
+                <!-- what does id = form do? -->
+                <h1 class="c">Create Account</h1>
 
-            <div class="form__input-group">
-                <h3>Business Name</h3>
-                <input type="text" class="form__input"  id="Business Name" placeholder="Business Name" name="bname">
-                <small>Error Message</small>
-            </div>
+                <div class="form__input-group">
+                    <h3>Business Name</h3>
+                    <input type="text" class="form__input" id="Business Name" placeholder="Business Name" name="bname">
+                    <small>Error Message</small>
+                </div>
 
-            <div class="form__input-group">
-                <h3>Email</h3>
-                <input type="text" class="form__input" id="email"placeholder="Email" name="email"> 
-                <small>Error Message</small>
-            </div>
+                <div class="form__input-group">
+                    <h3>Email</h3>
+                    <input type="text" class="form__input" id="email" placeholder="Email" name="email">
+                    <small>Error Message</small>
+                </div>
 
                 <div class="form__input-group">
                     <h3>Password</h3>
-                    <input type="password" class="form__input" id="password"placeholder="Password" name="password">
+                    <input type="password" class="form__input" id="password" placeholder="Password" name="password">
                     <small>Error Message</small>
                 </div>
 
                 <div class="form__input-group">
                     <h3>Confirm Password</h3>
-                    <input type="password" class="form__input" id="password2" placeholder=" Confirm Password" name="password2">
+                    <input type="password" class="form__input" id="password2" placeholder=" Confirm Password"
+                        name="password2">
                     <small>Error Message</small>
                 </div>
-            <button id="footer-btn">Submit</button>
+
+                <div class="form__input-group">
+                    <h3>Avaliability</h3>
+                    <!-- tr = table row         th = table header -->
+
+
+
+                    <!-- if the user picks a days check box the value will be 1 -->
+                    <table>
+                        <tr>
+                            <td><input type="checkbox" id="Monday" value=1 name="Monday"> Monday </td>
+
+                            <td> Open Time</td>
+                            <td> Closing Time</td>
+                        </tr>
+                        <tr>
+                            <!-- storing time into a database https://stackoverflow.com/questions/36773095/storing-html-input-of-type-time-into-mysql-database -->
+                            <td> </td>
+                            <td><input type="time" class=timebox id="Mopen" name="Mopen"></td>
+                            <td><input type="time" class=timebox id="Mclose" name="Mclose"></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox" value=1 name="Tuesday"> Tuesday </td>
+
+                            <td> Open Time</td>
+                            <td> Closing Time</td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td><input type="time" class=timebox id="Topen" name="Topen"></td>
+                            <td><input type="time" class=timebox id="Tclose" name="Tclose"></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox" value=1 id="Wednesday" name="Wednesday"> Wednesday </td>
+
+                            <td> Open Time</td>
+                            <td> Closing Time</td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td><input type="time" class=timebox id="Wopen" name="Wopen"></td>
+                            <td><input type="time" class=timebox id="Wclose" name="Wclose"></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox" value=1 id="Thursday" name="Thursday"> Thursday </td>
+
+                            <td> Open Time</td>
+                            <td> Closing Time</td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td><input type="time" class=timebox id="Thopen" name="Thopen"></td>
+                            <td><input type="time" class=timebox id="Thclose" name="Thclose"></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox" value=1 id="Friday" name="Friday"> Friday </td>
+
+                            <td> Open Time</td>
+                            <td> Closing Time</td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td><input type="time" class=timebox id="Fopen" name="Fopen"></td>
+                            <td><input type="time" class=timebox id="name=" Fclose"></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox" value=1 id="Saturday" name="Saturday"> Saturday </td>
+
+                            <td> Open Time</td>
+                            <td> Closing Time</td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td><input type="time" class=timebox id="Satopeen" name="Satopen"></td>
+                            <td><input type="time" class=timebox id="Satclose" name="Satclose"></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="checkbox" value=1 id="Sunday" name="Sunday"> Sunday </td>
+
+                            <td> Open Time</td>
+                            <td> Closing Time</td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td><input type="time" class=timebox id="Sunopen" name="Sunopen"></td>
+                            <td><input type="time" class=timebox id="Sunclose" name="Sunclose"></td>
+                        </tr>
+                    </table>
+
+
+                    <small>Error Message</small>
+                </div>
+
+                <button id="footer-btn">Submit</button>
             </form>
         </div>
     </div>
@@ -51,4 +168,5 @@
     </footer>
     <script src="./create.js"></script>
 </body>
+
 </html>

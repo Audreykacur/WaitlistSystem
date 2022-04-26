@@ -21,20 +21,35 @@
         </a>
     </header>
     <form>
-        <input type="text" class="todo-input" placeholder="Name and Number">
-        <button class="todo-btn" id="btn" type="submit">
-            <i class="fas fa-plus-square"></i>
-        </button>
-        <div class="select">
-            <select name="todos" class="filter-todo">
-                <option value="all">All</option>
-                <option value="completed">Completed</option>
-                <option value="incomplete">Incomplete</option>
-            </select>
-        </div>
+
+        <table>
+            <tr>
+                <td> </td>
+                <td><input type="text" class="todo-input" name="name" placeholder=" Name "></td>
+                <td><input type="text" class="todo-num" name="number" placeholder=" Number ">
+                    <button class="todo-btn" id="btn" type="submit">
+                        <i class="fas fa-plus-square"></i>
+                    </button>
+                </td>
+                <td>
+                    <div class="select">
+                        <select name="todos" class="filter-todo">
+                            <option value="all">All</option>
+                            <option value="completed">Completed</option>
+                            <option value="incomplete">Incomplete</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
     </form>
+    <!-- creating an empty (div)container ul is an empty unordered list -->
     <div class="todo-container">
         <ul class="todo-list"></ul>
+    </div>
+    <div class="todo-container">
+        <ul class="num-list"></ul>
     </div>
 
     <!-- <script type="text/javascript">

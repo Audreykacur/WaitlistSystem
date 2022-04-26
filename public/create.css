@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
-    --bg-color: #ede9f8;
+    --bg-color: #ffffff;
     --color-primary: #000000;
-    --color-secondary: #C1DCF4;
+    --color-secondary: #ddefff;
     --color-accent: #90b5d3;
 }
-header{
+
+header {
     width: 100%;
     height: 10vh;
     margin: 0 auto;
@@ -16,15 +18,26 @@ header{
     align-items: center;
     background-color: var(--color-primary);
 }
-a{
+
+th,
+td {
+
+    padding-left: .5rem;
+    padding-right: 1rem;
+
+}
+
+a {
     outline: none;
     text-decoration: none;
 }
-header h1{
+
+header h1 {
     margin-left: 30px;
     color: var(--bg-color);
 }
-.header__btn{
+
+.header__btn {
     margin-right: 30px;
     margin-bottom: 20px;
     text-decoration: none;
@@ -33,52 +46,68 @@ header h1{
     color: var(--color-accent);
     background-color: var(--color-primary);
     padding: 8px 12px;
-   font-size: 15px;
-   cursor: pointer;
+    font-size: 15px;
+    cursor: pointer;
 }
-body{
+
+body {
     height: 100vh;
     width: 100%;
     background-image: url(./useme.jpg);
-    background-position: center; 
+    background-position: center;
     background-size: 1500px;
 }
-.container{
+
+.container {
     border-top: 40px solid var(--color-accent);
     width: 600px;
     margin: 1rem;
     padding: 2rem;
     border-radius: var(--border-radius);
     background: white;
-   display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     margin-left: 400px;
     margin-top: 80px;
     border-radius: 20px;
 }
-input{
+
+input {
     color: var(--color-primary);
 }
-.form--hidden{
+
+.form--hidden {
     display: none;
 }
-.form > *:first-child{
+
+.form>*:first-child {
     margin-top: 0%;
 }
-.from> :last-child{
+
+.from> :last-child {
     margin-bottom: 0;
 }
-.form__title{
+
+.form__title {
     margin-bottom: 2rem;
     text-align: center;
+
     color: var(--color-primary);
+
+    /* width: 500px;
+    font-size: 3rem;
+    color: var(--color-primary);
+    /* padding: 14px;
+    border-radius: 20px; */
 }
-.form__input-group{
+
+.form__input-group {
     margin-bottom: 0.8rem;
     color: var(--color-primary);
 }
-.form__input{
+
+.form__input {
     display: block;
     width: 100%;
     padding: 0.75rem;
@@ -91,11 +120,27 @@ input{
     color: var(--color-primary);
     border-radius: 0.7rem;
 }
-.form__input :focus{
+
+.timebox {
+    display: block;
+    width: 7.5rem;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-primary);
+    outline: none;
+    background: var(--color-secondary);
+    transition: background 0.2s, border-color 0.2s;
+    color: var(--color-primary);
+    border-radius: 0.7rem;
+}
+
+.form__input :focus {
     border-color: var(--color-primary);
     background: #ffffff;
 }
-button{
+
+button {
     width: 100%;
     height: 50px;
     padding: 1rem, 2rem;
@@ -109,36 +154,48 @@ button{
     background-color: var(--color-accent);
     margin-top: 30px;
 }
-.form__button:active{
+
+.form__button:active {
     transform: scale(0.98);
 }
-.padding{
+
+.padding {
     padding-bottom: 10px;
 }
-#create_a{
+
+#create_a {
     color: var(--color-accent);
 }
-.form__input-group.success input{
-    border-color: 2px solid green ;
+
+.form__input-group.success input {
+    border-color: 2px solid green;
 }
-.form__input-group.error input{
+
+.form__input-group.error input {
     border-color: red;
 }
-.form__input-group small{
+
+.form__input-group small {
     color: red;
     position: absolute;
     visibility: hidden;
 }
-.form__input-group.error small{
+
+.form__input-group.error small {
     visibility: visible;
 }
-#footer-btn{
+
+/* #opens {
+    
+} */
+
+#footer-btn {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
     width: 100%;
-    background-color: #0055A4;
+    background-color: #1b3e4f;
     border: none;
     outline: none;
     color: #ede9f8;
@@ -147,8 +204,9 @@ button{
     margin-top: 1.4rem;
     border-radius: 20px;
     cursor: pointer;
-  }
-  footer{
+}
+
+footer {
     margin-top: 70px;
     color: var(--bg-color);
     display: flex;
@@ -156,78 +214,93 @@ button{
     align-items: center;
     background-color: var(--color-primary);
 }
-input{
+
+input {
     margin-top: 8px;
 }
 
-  @media only screen and (min-width: 780px) and (max-width: 980px){
-    .container{
+@media only screen and (min-width: 780px) and (max-width: 980px) {
+    .container {
         width: 640px;
         display: block;
     }
-    header{
+
+    header {
         width: 100%;
     }
-    header h1{
+
+    header h1 {
         margin-left: 20px;
     }
-    .header__btn{
+
+    .header__btn {
         margin-right: 20px;
         margin-bottom: 15px;
     }
-    footer{
+
+    footer {
         margin-top: 22px;
     }
 }
-@media only screen and (min-width: 780px) and (max-width: 980px){
-    .container{
+
+@media only screen and (min-width: 780px) and (max-width: 980px) {
+    .container {
         width: 600px;
         display: block;
         margin: 0 auto;
     }
-    footer{
+
+    footer {
         width: 100%;
     }
 
 }
-@media only screen and (min-width: 500px) and (max-width: 780px){
-    body{
+
+@media only screen and (min-width: 500px) and (max-width: 780px) {
+    body {
         height: 100vh;
         flex-wrap: wrap;
     }
-    .container{
+
+    .container {
         width: 400px;
         margin-top: 20px;
         margin: 0 auto;
     }
-    header{
+
+    header {
         width: 100%;
         margin-bottom: 20px;
     }
 
 }
-@media only screen and (min-width: 400px) and (max-width: 500px){
-    header{
-       width: 100%;
+
+@media only screen and (min-width: 400px) and (max-width: 500px) {
+    header {
+        width: 100%;
     }
-    .container{
-      width: 300px;
-      height: 80vh;
-      display: block;
-      margin: 0 auto;
-      margin-top: 10px;
+
+    .container {
+        width: 300px;
+        height: 80vh;
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
     }
-    footer{
+
+    footer {
         font-size: 0.6rem;
     }
 }
-@media only screen and (max-width: 400px){
-    .container{
+
+@media only screen and (max-width: 400px) {
+    .container {
         width: 300px;
         display: block;
         height: 80vh;
     }
-    #header-home{
+
+    #header-home {
         margin: 0 auto;
         width: 200px;
         color: var(--color-accent);
@@ -236,7 +309,8 @@ input{
         font-size: 1.2rem;
         background-color: var(--bg-color);
     }
-    footer{
+
+    footer {
         font-size: 0.5rem;
     }
 }

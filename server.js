@@ -9,7 +9,7 @@ var connection = mysql.createConnection({
     host: 'localhost',
     database: 'user_login',
     user: 'root',
-    password: '**',
+    password: 'AudreyKacur',
 });
 
 module.exports = connection;
@@ -21,27 +21,17 @@ app.get('/', function (req, res) {
 });
 
 
-//app.listen(6)
-
-
 //if you cant terminal to print out ssomething when its connected
-app.listen(7, function () {
-    console.log('App listening on port 7');
+app.listen(22, function () {
+    console.log('App listening on port 22');
     connection.connect(function (err) {
         if (err) throw err;
-        console.log("Database connected!");
+        else console.log("Database connected!");
     })
 });
 
 
 
-
-// var connection = mysql.createConnection({
-//     host: 'localhost',
-//     database: '',
-//     user: 'root',
-//     password: 'AudreyKacur',
-// })
 
 
 // con.connect(function (err) {
